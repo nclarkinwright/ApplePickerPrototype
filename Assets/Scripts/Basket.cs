@@ -41,12 +41,25 @@ public class Basket : MonoBehaviour
         GameObject collidedWith = collision.gameObject;
         if ( collidedWith.tag == "Apple" )
         {
+            string name = collidedWith.name;
             Destroy(collidedWith);
 
             // Parse the text of the scoreGT into an int
             int score = int.Parse(scoreGT.text);
             // Add points for catching the apple
-            score += 100;
+            if (name == "Apple(Clone)")
+            { score += 100; }
+            else if (name == "HarderApple(Clone)")
+            { score += 125; }
+            else if (name == "HardApple(Clone)")
+            { score += 150; }
+            else if (name == "VeryHardApple(Clone)")
+            { score += 175; }
+            else if (name == "HardestApple(Clone)")
+            { score += 200; }
+            else 
+            { score += 0; }
+            
             // Convert the score back to a string and display it
             scoreGT.text = score.ToString();
 

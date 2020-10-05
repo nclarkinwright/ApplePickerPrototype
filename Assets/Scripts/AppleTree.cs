@@ -7,6 +7,10 @@ public class AppleTree : MonoBehaviour
     [Header("Set in Inspector")]
     // Prefab for instantiating apples
     public GameObject applePrefab;
+    public GameObject harderApplePrefab;
+    public GameObject hardApplePrefab;
+    public GameObject veryHardApplePrefab;
+    public GameObject hardestApplePrefab;
 
     // Speed at which the AppleTree moves
     public float speed = 1f;
@@ -28,7 +32,17 @@ public class AppleTree : MonoBehaviour
 
     void DropApple()
     {
-        GameObject apple = Instantiate<GameObject>( applePrefab );
+        GameObject apple;
+        if (Time.timeSinceLevelLoad < 20)
+            { apple = Instantiate<GameObject>(applePrefab); }
+        else if (Time.timeSinceLevelLoad < 40)
+            { apple = Instantiate<GameObject>(harderApplePrefab); }
+        else if (Time.timeSinceLevelLoad < 60)
+            { apple = Instantiate<GameObject>(hardApplePrefab); }
+        else if (Time.timeSinceLevelLoad < 80)
+            { apple = Instantiate<GameObject>(veryHardApplePrefab); }
+        else
+            { apple = Instantiate<GameObject>(hardestApplePrefab); }
         apple.transform.position = transform.position;
         Invoke( "DropApple", secondsBetweenAppleDrops );
     }

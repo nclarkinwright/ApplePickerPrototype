@@ -685,6 +685,30 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7607020218198662650, guid: 87a2f63f5207c0246b5111cd0473544a,
         type: 3}
+    - target: {fileID: -5249490997893095626, guid: 7b3d87e6f175df846bebaf612921242e,
+        type: 3}
+      propertyPath: hardApplePrefab
+      value: 
+      objectReference: {fileID: 219487463770123464, guid: fce349adbb8343746b2cfadd7a0e5edf,
+        type: 3}
+    - target: {fileID: -5249490997893095626, guid: 7b3d87e6f175df846bebaf612921242e,
+        type: 3}
+      propertyPath: harderApplePrefab
+      value: 
+      objectReference: {fileID: 5945901429901536272, guid: f4cc051f512761f42acd1441f307c8ff,
+        type: 3}
+    - target: {fileID: -5249490997893095626, guid: 7b3d87e6f175df846bebaf612921242e,
+        type: 3}
+      propertyPath: hardestApplePrefab
+      value: 
+      objectReference: {fileID: 6260213822205121169, guid: 89508cf554a81b14497b734880b9ff89,
+        type: 3}
+    - target: {fileID: -5249490997893095626, guid: 7b3d87e6f175df846bebaf612921242e,
+        type: 3}
+      propertyPath: veryHardApplePrefab
+      value: 
+      objectReference: {fileID: 3026304820633947893, guid: 9e9aa6965eb69fd43aa3ddaf1fb40ed9,
+        type: 3}
     - target: {fileID: 4917507036908961434, guid: 7b3d87e6f175df846bebaf612921242e,
         type: 3}
       propertyPath: m_Name

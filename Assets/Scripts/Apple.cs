@@ -5,8 +5,8 @@ using UnityEngine;
 public class Apple : MonoBehaviour
 {
     public static float bottomY = -20f;
-    public static float speed = -10;
-    
+    public float speed = -10f;
+
     void Update()
     {
         if ( transform.position.y < bottomY)
