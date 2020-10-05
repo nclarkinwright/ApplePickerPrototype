@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Apple
+  - EasyApple
+  - HardApple
   layers:
   - Default
   - TransparentFX
