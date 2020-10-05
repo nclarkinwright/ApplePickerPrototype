@@ -5,8 +5,8 @@ using UnityEngine;
 public class Apple : MonoBehaviour
 {
     public static float bottomY = -20f;
+    public static float speed = -10;
     
-    // Update is called once per frame
     void Update()
     {
         if ( transform.position.y < bottomY)
@@ -18,5 +18,10 @@ public class Apple : MonoBehaviour
             // Call the public AppleDestroyed() method of apScript
             apScript.AppleDestroyed();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position = transform.position + new Vector3(0, speed * Time.deltaTime, 0);
     }
 }
