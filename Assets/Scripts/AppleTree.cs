@@ -11,6 +11,7 @@ public class AppleTree : MonoBehaviour
     public GameObject hardApplePrefab;
     public GameObject veryHardApplePrefab;
     public GameObject hardestApplePrefab;
+    public GameObject rockPrefab;
 
     // Speed at which the AppleTree moves
     public float speed = 1f;
@@ -24,10 +25,16 @@ public class AppleTree : MonoBehaviour
     // Rate at which Apples will be instantiated
     public float secondsBetweenAppleDrops = 1f;
 
+    //Rate at which Rocks will be dropped
+    public float secondsBetweenRockDrops = 5f;
+
     private void Start()
     {
         // Dropping apples every second
         Invoke("DropApple", 2f);
+
+        // Dropping rocks every 5 seconds
+        Invoke("DropRock", secondsBetweenRockDrops);
     }
 
     void DropApple()
@@ -45,6 +52,13 @@ public class AppleTree : MonoBehaviour
             { apple = Instantiate<GameObject>(hardestApplePrefab); }
         apple.transform.position = transform.position;
         Invoke( "DropApple", secondsBetweenAppleDrops );
+    }
+
+    void DropRock()
+    {
+        GameObject rock = Instantiate<GameObject>(rockPrefab);
+        rock.transform.position = transform.position;
+        Invoke("DropRock", secondsBetweenRockDrops);
     }
 
     private void Update()

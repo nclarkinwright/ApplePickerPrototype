@@ -69,5 +69,13 @@ public class Basket : MonoBehaviour
                 HighScore.score = score;
             }
         }
+
+        if (collidedWith.tag == "Rock")
+        {
+            Destroy(collidedWith);
+            int score = int.Parse(scoreGT.text);
+            score -= 500;
+            scoreGT.text = score.ToString();
+        }
     }
 }

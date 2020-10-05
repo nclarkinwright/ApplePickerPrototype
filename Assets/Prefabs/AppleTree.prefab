@@ -64,10 +64,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applePrefab: {fileID: 7607020218198662650, guid: 87a2f63f5207c0246b5111cd0473544a,
     type: 3}
+  harderApplePrefab: {fileID: 5945901429901536272, guid: f4cc051f512761f42acd1441f307c8ff,
+    type: 3}
+  hardApplePrefab: {fileID: 219487463770123464, guid: fce349adbb8343746b2cfadd7a0e5edf,
+    type: 3}
+  veryHardApplePrefab: {fileID: 3026304820633947893, guid: 9e9aa6965eb69fd43aa3ddaf1fb40ed9,
+    type: 3}
+  hardestApplePrefab: {fileID: 6260213822205121169, guid: 89508cf554a81b14497b734880b9ff89,
+    type: 3}
+  rockPrefab: {fileID: 5752679395650758203, guid: a47de9d1d835c5942a0379ccf5930387,
+    type: 3}
   speed: 1
   leftAndRightEdge: 10
   chanceToChangeDirections: 0.1
   secondsBetweenAppleDrops: 1
+  secondsBetweenRockDrops: 5
 --- !u!1 &4917507037371173156
 GameObject:
   m_ObjectHideFlags: 0
